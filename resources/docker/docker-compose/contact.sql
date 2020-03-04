@@ -36,6 +36,8 @@ CREATE TABLE `contact`  (
 -- ----------------------------
 -- Records of contact
 -- ----------------------------
+INSERT INTO `contact` VALUES (1, 'http://img01.02d.com/Public/Upload/image/20190713/5d29b8512a04f.jpg', 'BarieCat“柚屿”系列', '舒适的非离子材质融合充满复古韵味的混血花纹；虚化的深色边缘与瞳孔的轮廓完美融合；搭配低明度高显色的基色将酷感混血进行到底。', 134.00, 'Bariecat');
+INSERT INTO `contact` VALUES (2, 'http://img01.02d.com/Public/Upload/image/20190713/5d297c0fa4f48.jpg', '溪悦creekeye呦呦灰_副本', '进口MPC高保湿型非离子，轻薄无感！', 89.00, '溪悦Creek eye');
 INSERT INTO `contact` VALUES (3, 'http://img01.02d.com/Public/Upload/image/20190713/5d29b8512a04f.jpg', 'BarieCat“柚屿”系列', '舒适的非离子材质融合充满复古韵味的混血花纹；虚化的深色边缘与瞳孔的轮廓完美融合；搭配低明度高显色的基色将酷感混血进行到底。', 134.00, 'Bariecat');
 INSERT INTO `contact` VALUES (4, 'http://img01.02d.com/Public/Upload/image/20190713/5d297c0fa4f48.jpg', '溪悦creekeye呦呦灰_副本', '进口MPC高保湿型非离子，轻薄无感！', 89.00, '溪悦Creek eye');
 INSERT INTO `contact` VALUES (5, 'http://img01.02d.com/Public/Upload/image/20190713/5d297b1dab839.jpg', '溪悦creekeye呦呦灰', '进口MPC高保湿型非离子，轻薄无感！', 89.00, '溪悦Creek eye');
