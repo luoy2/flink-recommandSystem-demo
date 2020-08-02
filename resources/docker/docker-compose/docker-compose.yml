@@ -72,7 +72,7 @@ services:
 
   jobmanager:
     container_name: flink_jobmanager
-    image: ${FLINK_DOCKER_IMAGE_NAME:-flink}
+    image: library/flink:1.11.1
     expose:
       - "6123"
     ports:
@@ -84,10 +84,12 @@ services:
     command: jobmanager
     environment:
       - JOB_MANAGER_RPC_ADDRESS=jobmanager
+    volumes:
+      - D:/SkyDrive/Work/CCB/java/flink-recommandSystem-demo/flink-2-hbase/target/:/opt/jobs/
 
   taskmanager:
     # container_name: flink_taskmanager
-    image: ${FLINK_DOCKER_IMAGE_NAME:-flink}
+    image: library/flink:1.11.1
     expose:
       - "6121"
       - "6122"
