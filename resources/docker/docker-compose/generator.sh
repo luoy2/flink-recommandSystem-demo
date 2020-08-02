@@ -4,13 +4,11 @@ function create_kafka_topic {
 }
 function send_messages_to_kafka {
     msg=$(generator_message)
+    echo $msg
     echo -e $msg | $KAFKA_HOME/bin/kafka-console-producer.sh --broker-list kafka:9093 --topic $TOPIC
 }
 function rand {
-    min=$1
-    max=$(($2-$min+1))
-    num=$(date +%s%N)
-    echo $(($num%$max+$min))
+    echo $(($(($RANDOM%$(($Y-$X+1))))+X))
 }
 function generator_message {
     uid=$(rand 1 999);
@@ -21,10 +19,10 @@ function generator_message {
     echo $msg
 }
 
-TOPIC="log"
-create_kafka_topic $TOPIC
+TOPIC="test"
+# create_kafka_topic $TOPIC
 while true
 do
  send_messages_to_kafka
- sleep 0.1
+ sleep 0.5
 done

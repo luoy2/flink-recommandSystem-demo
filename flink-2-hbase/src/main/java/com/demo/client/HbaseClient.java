@@ -14,6 +14,7 @@ public class HbaseClient {
     public static Connection conn;
 
     static {
+        System.setProperty("hadoop.home.dir", "C:\\Hadoop");
         Configuration conf = HBaseConfiguration.create();
         conf.set("hbase.rootdir", Property.getStrValue("hbase.rootdir"));
         conf.set("hbase.zookeeper.quorum", Property.getStrValue("hbase.zookeeper.quorum"));

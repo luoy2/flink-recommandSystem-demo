@@ -21,6 +21,7 @@ public class LogTask {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         Properties properties = Property.getKafkaProperties("log");
+        System.out.println(properties);
         DataStreamSource<String> dataStream = env.addSource(new FlinkKafkaConsumer<String>("con", new SimpleStringSchema(), properties));
         dataStream.map(new LogMapFunction());
 

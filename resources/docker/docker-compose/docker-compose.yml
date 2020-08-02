@@ -24,7 +24,7 @@ services:
       # KAFKA_CREATE_TOPICS: "flink:1:1"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - D:/SkyDrive/CCB/java/flink-recommandSystem-demo/resources/docker/docker-compose/generator.sh:/opt/generator.sh
+      - D:/SkyDrive/Work/CCB/java/flink-recommandSystem-demo/resources/docker/docker-compose/generator.sh:/opt/generator.sh
 
   hbase:
     container_name: hbase
@@ -45,7 +45,7 @@ services:
       - "16030:16030"
     command: ["/wait-for-it.sh", "zookeeper:2181", "-t", "10", "--", "/usr/bin/supervisord"]
     volumes:
-      - D:/SkyDrive/CCB/java/flink-recommandSystem-demo/resources/docker/docker-compose/hbase_ini.sql:/opt/hbase_ini.sql
+      - D:/SkyDrive/Work/CCB/java/flink-recommandSystem-demo/resources/docker/docker-compose/hbase_ini.sql:/opt/hbase_ini.sql
 
   mysql:
     image: mysql
@@ -53,13 +53,13 @@ services:
     restart: always
     container_name: mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_ROOT_PASSWORD=axkZYmyNIQ54DoLY
       - MYSQL_ROOT_HOST=%
     ports:
       - "3308:3306"
-      - "33060:33060"
+      - "33080:33060"
     volumes:
-      - D:/SkyDrive/CCB/java/flink-recommandSystem-demo/resources/docker/docker-compose:/docker-entrypoint-initdb.d
+      - D:/SkyDrive/Work/CCB/java/flink-recommandSystem-demo/resources/docker/docker-compose/contact.sql:/docker-entrypoint-initdb.d/init.sql
 
 
   redis:
